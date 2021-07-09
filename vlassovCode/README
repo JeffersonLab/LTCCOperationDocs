@@ -1,0 +1,19 @@
+a geometry file for CLAS6: (ccngeom.dat)
+and a code for reading it: (ccdein.F)
+
+
+focus positions: hpfseek, elfseek
+
+
+
+
+x12, y12 define the max angles
+
+hwde define the z width - read from ccngeom.dat , see ccdein
+
+
+
+
+the theta of the elliptical mirrors are the in the last 18 numbers in ccngeom (see how they are read in ccdein)
+
+I just grep those and put in separate .dat files
