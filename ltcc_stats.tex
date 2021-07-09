@@ -1,0 +1,111 @@
+\ifx\pdfoutput\undefined      % compilazione htlatex
+\documentclass{article}
+\DeclareGraphicsExtensions{.png, .gif, .jpg}
+\newcommand{\href}[2]{\Link[#1]{}{} #2 \EndLink}
+\newcommand{\hypertarget}[2]{\Link[]{}{#1} #2 \EndLink}
+\newcommand{\hyperlink}[2]{\Link[]{#1}{} #2 \EndLink}
+\else                         % compilazione pdflatex
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{amssymb,amsmath}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\setlength\textwidth{6.5in}
+\setlength\textheight{8.1in}
+\setlength\oddsidemargin{0in}
+\setlength\evensidemargin{0in}
+\setlength\topmargin{-0.6in}
+\setlength\footskip{0.6in}
+\setlength\headsep{0.6in}
+\usepackage[hyperindex]{hyperref}
+\usepackage{qtree}
+\newcommand{\percent}{\,^0\!/_0}
+ \hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=true,      % page fit to window when opened
+    pdfauthor={Maurizio},   % author
+    pdfsubject={Ungaro},    % subject of the document
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=black,        % color of internal links
+    citecolor=blue,         % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+\fi
+
+
+\begin{document}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\slshape \thesection\ #1}{}}
+\fancyhead[R]{\bf\rightmark} 
+\fancyhead[L]{LTCC }
+\fancyfoot[R]{ \sl M. Ungaro}
+\fancyfoot[L]{ \sl JLAB}
+
+\title{\large Low Threshold Cherenkov Detector Specs}
+ \author{M. Ungaro}
+\maketitle
+
+\begin{center}
+LTCC properties\\
+\begin{tabular}{| l | c |}
+\hline \hline
+Property                 & Value \\
+\hline
+{\bf Mirrors}            &                                              \\
+Support Structure        & 3 Kevlar layers sandwiched with vinyl foam   \\
+Elliptical               & Length = 6’’ to 55’’, Width = 8’’ to 11’’    \\ 
+Hyperbolic               & Length = 12’’ to 30’’, Width = 8’’ to 9.25’’ \\
+Mirror Coating           & Al/MgF2                                      \\
+Reflectivity             & 85\% from 250 to 650 nm                      \\
+{\bf $C_4F_{10}$ gas}    &                                              \\
+Refraction Index         & 1.00134                                      \\
+Transparency             & 100\% above 220nm                            \\
+Density                  & 9.94 kg/m3                                   \\
+Window Material          & Tedlar/Mylar/Tedlar composite                \\
+{\bf Magnetic Shields}   &                                              \\
+Material                 & Eagle AAA: 80\% Ni, 4.20\% Mo, and 15\% Fe   \\
+Field Attenuation Factor &  85 Axial, 390 Transverse                    \\
+{\bf PID}                &                                              \\
+$\pi/K$ separation       &  3.5 to 9 GeV/c                              \\
+Time resolution          &  ~0.6 ns                                     \\
+\hline \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+LTCC channel counts \\
+\begin{tabular}{| l | c |}
+\hline \hline
+Property                 & Value \\
+\hline
+PMTs             &  200 Photonis XP 4500B, 16 Photonis XP 4508    \\
+Voltage Dividers & Philips / Photonis VD305K                      \\
+Flash ADC        & JLab fADC250-MHz, 16 ch                        \\
+TDC              & JLab F1TDC V2, 32 ch                           \\
+Calibration      & Online (prescaled trigger) or dedicated runs   \\
+Monitoring       & Online occupancies                             \\
+\hline \hline
+\end{tabular}
+\end{center}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
